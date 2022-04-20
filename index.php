@@ -113,6 +113,8 @@ echo htmlspecialchars(date('G:i'));
             echo "<br>名字：" . $row['username'];
             
             $context = $row['content'];
+			$context = str_replace("<?"," ",$context);
+			$context = str_replace("</"," ",$context);
             $context = str_replace("[b]","<b>",$context);
             $context = str_replace("[/b]","</b>",$context);
             $context = str_replace("[i]","<i>",$context);
