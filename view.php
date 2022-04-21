@@ -12,6 +12,8 @@ while ($row = mysqli_fetch_assoc($result2)) {
 	echo "<br>名字：" . $row['username'];
 
     $context = $row['content'];
+    $context = str_replace(">"," ",$context);
+	$context = str_replace("<"," ",$context);
     $context = str_replace("[b]","<b>",$context);
     $context = str_replace("[/b]","</b>",$context);
     $context = str_replace("[i]","<i>",$context);
