@@ -7,7 +7,7 @@ if( !isset($_POST['username']) || !isset($_POST['password']) || $_POST['username
 }
 $username = $_POST['username'];
 $password = $_POST['password'];
-if(!ctype_alnum($username))
+if(!ctype_alnum($username) || !ctype_alnum($password))
 {
     echo '不能有特殊符號';
     return;

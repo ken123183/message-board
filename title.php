@@ -3,6 +3,8 @@ if( !isset($_POST['ti']) || $_POST['ti']=="" ){
     header("Location: index.php");
 }
 $ti = $_POST['ti'];
+$ti = str_replace(">"," ",$ti);
+$ti = str_replace("<"," ",$ti);
 require_once('config.php');
 SESSION_start();
 if (!$_SESSION["admin"])
